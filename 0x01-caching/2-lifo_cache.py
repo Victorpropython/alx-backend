@@ -5,10 +5,12 @@ BaseCaching = __import__('base_caching').BaseCaching
 
 
 class LIFOCache(BaseCaching):
-    """LIFOCache class inherits from BaseCaching and implements a Last-In-First-Out (LIFO) caching system."""
+    """LIFOCache class inherits from BaseCaching and implements
+    a Last-In-First-Out (LIFO) caching system."""
 
     def put(self, key, item):
-        """Assigns the item value to the key in the cache data, evicting the newest item if necessary.
+        """Assigns the item value to the key in the cache data,
+        evicting the newest item if necessary.
 
         Args:
             key (str): The key to store the item under.
@@ -35,7 +37,8 @@ class LIFOCache(BaseCaching):
             key (str): The key to retrieve the item from.
 
         Returns:
-            The value associated with the key, or None if the key is not found or is None.
+            The value associated with the key, or None if the key
+            is not found or is None.
         """
         if key is None or key not in self.cache_data:
             return None
