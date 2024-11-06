@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """ An app for outputting "Welcome to Holberton"
     as a title page and Helloword as a Header
 """
@@ -6,6 +6,7 @@ from flask import Flask, render_template
 
 
 app = Flask(__name__)
+
 
 @app.route('/')
 def index():
